@@ -10,18 +10,12 @@
 #include <thread>
 #include <string_view>
 #include "lodepng.h"
+#include "Decode_Encode.h"
 
 using namespace std;
 
-void encode(string_view filename, std::vector<unsigned char>& image, unsigned width, unsigned height) {
-    unsigned error = lodepng::encode(filename.data(), image, width, height);
-    if (error) {
-        std::cout << "encoder error " << error << ": " << lodepng_error_text(error) << std::endl;
-    }
-}
-
-template <typename  T >
-void Green_filter(T image, unsigned int w, unsigned int h) {
+template <typename  T, typename T1 >
+void Green_filter(T image, T1 w, T1 h) {
 
 
     for (size_t i = 0; i < h; i++) {

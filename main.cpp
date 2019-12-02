@@ -7,18 +7,8 @@
 #include "Red_filter.h"
 #include "Blue_filter.h"
 
+
 using namespace std;
-
-std::vector<unsigned char> decode(string_view filename,
-    unsigned int& width, unsigned int& height) {
-
-    std::vector<unsigned char> result;
-    unsigned error = lodepng::decode(result, width, height, filename.data());
-    if (error) {
-        std::cerr << "decoder error " << error << ": " << lodepng_error_text(error) << std::endl;
-    }
-    return result;
-}
 
 
 int main(){
