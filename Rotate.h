@@ -29,7 +29,7 @@ void Rotate( T image, T1 w, T1 h){
     }
 
 
-    encode("../Image_Rotated.png", image, w, h);
+    encode("../Rotated.png", image, w, h);
 
 }
 #endif //PC4_ROTATE_H
