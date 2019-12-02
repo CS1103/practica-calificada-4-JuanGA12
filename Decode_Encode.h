@@ -12,6 +12,7 @@
 using namespace std;
 
 template <typename T>
+
 std::vector<unsigned char> decode(string_view filename, T & width, T & height) {
 
     std::vector<unsigned char> result;

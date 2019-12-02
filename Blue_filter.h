@@ -11,8 +11,8 @@
 #include <string_view>
 #include "lodepng.h"
 #include "Decode_Encode.h"
-using namespace std;
 
+using namespace std;
 
 template <typename T, typename T1>
 void Blue_filter(T image, T1 w, T1 h) {
